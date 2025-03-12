@@ -1,9 +1,9 @@
 WITH flights_one_month AS (
-SELECT *
-FROM staging_flights_one_month
-),
+        SELECT *
+        FROM staging_flights_one_month
+        ),
 flights_cleaned AS(
-SELECT flight_date::DATE
+        SELECT flight_date::DATE
         ,TO_CHAR(dep_time, 'fm0000')::TIME AS dep_time
         ,TO_CHAR(sched_dep_time, 'fm0000')::TIME AS sched_dep_time
         ,dep_delay
@@ -26,6 +26,7 @@ SELECT flight_date::DATE
         ,diverted
 FROM flights_one_month
 )
+
 SELECT * FROM flights_cleaned
 
 
