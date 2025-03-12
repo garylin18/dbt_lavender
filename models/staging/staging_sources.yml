@@ -7,7 +7,7 @@ sources:
     - name: weather_daily_raw
     - name: weather_hourly_raw
 
-- name: staging_data
+- name: flights_data
   schema: public
   tables:
     - name: flights
